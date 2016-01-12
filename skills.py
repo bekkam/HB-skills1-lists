@@ -14,7 +14,6 @@ def all_odd(number_list):
         []
 
     """
-
     return [number for number in number_list if number % 2 == 1]
 
 
@@ -28,7 +27,6 @@ def all_even(number_list):
         []
 
     """
-
     return [number for number in number_list if number % 2 == 0]
 
 
@@ -51,7 +49,6 @@ def print_indexes(my_list):
         2 Volvo
 
     """
-
     for i, item in enumerate(my_list):
         print "{} {}".format(i, item)
 
@@ -66,7 +63,6 @@ def long_words(word_list):
         []
 
     """
-
     return [item for item in word_list if len(item) > 4]
 
 
@@ -89,7 +85,6 @@ def smallest_int(number_list):
         True
 
     """
-
     return reduce((lambda x, y: x if x < y else y), number_list) if number_list else None
 
 
@@ -110,7 +105,6 @@ def largest_int(number_list):
         True
 
     """
-
     return reduce((lambda x, y: x if x > y else y), number_list) if number_list else None
 
 
@@ -126,7 +120,6 @@ def halvesies(number_list):
         [0.5, 2.5]
 
     """
-
     return [float(num)/2 for num in number_list]
 
 
@@ -137,7 +130,6 @@ def word_lengths(word_list):
         [5, 3, 5, 4]
 
     """
-
     return [len(item) for item in word_list]
 
 
@@ -156,7 +148,6 @@ def sum_numbers(number_list):
         0
 
     """
-
     return 0 if not number_list else reduce((lambda x, y: x + y), number_list)
 
 
@@ -178,7 +169,6 @@ def mult_numbers(number_list):
         1
 
     """
-
     return 1 if not number_list else reduce((lambda x, y: x * y), number_list)
 
 
@@ -197,7 +187,6 @@ def join_strings(word_list):
         ''
 
     """
-
     return "" if not word_list else reduce((lambda x, y: x + y), word_list)
 
 
@@ -210,7 +199,6 @@ def average(number_list):
     There is no defined answer if the list given is empty. It's fine if
     this raises an error when given an empty list.
     """
-
     sum_of_numbers = reduce((lambda x, y: x + y), number_list)
 
     return "Error: that list is empty" if not number_list else float(sum_of_numbers)/float(len(number_list))
@@ -229,7 +217,6 @@ def join_strings_with_comma(list_of_words):
         'Pretzel'
 
     """
-
     return reduce((lambda x, y: x + ", " + y), list_of_words)
 
 
