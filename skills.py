@@ -52,9 +52,6 @@ def print_indexes(my_list):
 
     """
 
-    # for i in range(len(my_list)):
-    #     print "{} {}".format(i, my_list[i])
-
     for i, item in enumerate(my_list):
         print "{} {}".format(i, item)
 
@@ -93,12 +90,6 @@ def smallest_int(number_list):
 
     """
 
-    # if not number_list:
-    #     return
-    # else:
-    #     number_list.sort()
-    #     return number_list[0]
-
     return reduce((lambda x, y: x if x < y else y), number_list) if number_list else None
 
 
@@ -119,12 +110,6 @@ def largest_int(number_list):
         True
 
     """
-
-    # if not number_list:
-    #     return
-    # else:
-    #     number_list.sort()
-    #     return number_list[-1]
 
     return reduce((lambda x, y: x if x > y else y), number_list) if number_list else None
 
@@ -172,11 +157,6 @@ def sum_numbers(number_list):
 
     """
 
-    # result = 0
-    # for number in number_list:
-    #     result += number
-    # return result
-
     return 0 if not number_list else reduce((lambda x, y: x + y), number_list)
 
 
@@ -199,11 +179,6 @@ def mult_numbers(number_list):
 
     """
 
-    # result = 1
-    # for number in number_list:
-    #     result *= number
-    # return result
-
     return 1 if not number_list else reduce((lambda x, y: x * y), number_list)
 
 
@@ -223,16 +198,6 @@ def join_strings(word_list):
 
     """
 
-    # result = ""
-    # for word in word_list:
-    #     result += word
-    # return result
-
-    if not word_list:
-        return ""
-    else:
-        return reduce((lambda x, y: x + y), word_list)
-
     return "" if not word_list else reduce((lambda x, y: x + y), word_list)
 
 
@@ -246,20 +211,6 @@ def average(number_list):
     this raises an error when given an empty list.
     """
 
-    # Solution 1:
-    # if not number_list:
-    #     return "Error: that list is empty"
-
-    # result = 0
-    # for number in number_list:
-    #     result += number
-
-    # return float(result)/float(len(number_list))
-
-    # Solution 2: (concise, but possibly at the cost of readability)
-    # return "Error: that list is empty" if not number_list else float(reduce((lambda x, y: x + y), number_list))/float(len(number_list))
-
-    # Solution 3: (hopefully the the most readable and maintainable)
     sum_of_numbers = reduce((lambda x, y: x + y), number_list)
 
     return "Error: that list is empty" if not number_list else float(sum_of_numbers)/float(len(number_list))
@@ -278,15 +229,6 @@ def join_strings_with_comma(list_of_words):
         'Pretzel'
 
     """
-
-    # result = ""
-    # if len(list_of_words) == 1:
-    #     return list_of_words[0]
-    # else:
-    #     for word in list_of_words[0:-1]:
-    #         result += word + ", "
-    #     result += list_of_words[-1]
-    # return result
 
     return reduce((lambda x, y: x + ", " + y), list_of_words)
 
